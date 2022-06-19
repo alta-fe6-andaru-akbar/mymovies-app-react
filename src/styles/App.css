@@ -7,6 +7,16 @@
   pointer-events: none;
 }
 
+.detail-title {
+  background: rgba(212, 212, 216, .8);
+  border-radius: 10px;
+}
+
+.detail-body {
+  background: rgba(212, 212, 216, .8);
+  
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -1,13 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { MoviesProvider } from "./context/MoviesContext";
+import reportWebVitals from "./reportWebVitals";
+import App from "./App";
+import "./styles/index.css";
+import { ThemeProvider } from "./context/ThemeContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      {/* Router */}
+      <BrowserRouter>
+        {/* Provider Context */}
+        <MoviesProvider>
+          {/* Komponen Utama */}
+          <App />
+        </MoviesProvider>
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );
 
