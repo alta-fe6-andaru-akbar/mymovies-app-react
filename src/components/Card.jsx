@@ -1,4 +1,4 @@
-import React, { Component, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MoviesContext } from "../context/MoviesContext";
 
@@ -52,7 +52,7 @@ const Card = ({ movie }) => {
             </button>
           </Link>
           <button
-            className="text-white bg-blue-500 p-2 rounded-md"
+            className="text-white bg-blue-500 p-2 rounded-md jastify-center"
             onClick={() =>
               fav ? handleRemoveFavorite(movie) : handleAddFavorite(movie)
             }
@@ -65,22 +65,22 @@ const Card = ({ movie }) => {
   );
 };
 
-class Card2 extends Component {
-  render() {
-    return (
-      <div className="container grow p-3 flex flex-col bg-zinc-800 md:bg-zinc-500 rounded">
-        <img
-          className="max-w-full h-auto"
-          width="500"
-          height="750"
-          src={this.props.imgItem}
-          alt={this.props.imgItem}
-        />
-        <p className="text-white">{this.props.titleItem}</p>
-        <p className="text-white">{this.props.contentItem}</p>
-      </div>
-    );
-  }
-}
+// class Card2 extends Component {
+//   render() {
+//     return (
+//       <div className="container grow p-3 flex flex-col bg-zinc-800 md:bg-zinc-500 rounded">
+//         <img
+//           className="max-w-full h-auto"
+//           width="500"
+//           height="750"
+//           src={this.props.imgItem}
+//           alt={this.props.imgItem}
+//         />
+//         <p className="text-white">{this.props.titleItem}</p>
+//         <p className="text-white">{this.props.contentItem}</p>
+//       </div>
+//     );
+//   }
+// }
 
 export { Card };

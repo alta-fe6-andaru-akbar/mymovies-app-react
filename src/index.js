@@ -5,21 +5,18 @@ import { MoviesProvider } from "./context/MoviesContext";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 import "./styles/index.css";
-import { ThemeProvider } from "./context/ThemeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ThemeProvider>
-      {/* Router */}
-      <BrowserRouter>
-        {/* Provider Context */}
-        <MoviesProvider>
-          {/* Komponen Utama */}
-          <App />
-        </MoviesProvider>
-      </BrowserRouter>
-    </ThemeProvider>
+    {/* Router */}
+    <BrowserRouter>
+      {/* Provider Context */}
+      <MoviesProvider>
+        {/* Komponen Utama */}
+        <App />
+      </MoviesProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

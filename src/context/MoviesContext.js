@@ -47,3 +47,5 @@ export const MoviesProvider = ({ children }) => {
     </MoviesContext.Provider>
   );
 };
+
+export const ThemeContext = createContext("");
